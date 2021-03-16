@@ -44,3 +44,34 @@ To run this application, clone the repository on your local machine and execute 
 /dashboard | False | Create, Read, Update and Delete a shopping list
 /details/<int:list_id> | False | View all shopping list's items
 /details/<int:list_id>/<int:item_id> | False | Update and Delete a shopping list's item
+
+
+
+## mis arreglos:
+cd /tmp
+git clone https://github.com/eze-fayu/django-shopping-list.git
+# cd /tmp/django-shopping-list
+# virtualenv virtenv
+# source virtenv/bin/activate
+
+# pip install -r requirements.txt
+# # export SECRET_KEY=fayu666
+
+git add .
+
+git commit -m "comienzo proyecto"
+
+heroku login
+
+# solo si lo creo
+heroku create listasuper 
+
+heroku git:remote -a listasuper
+
+heroku addons:create heroku-postgresql:hobby-dev
+
+git push heroku master
+
+heroku run python manage.py makemigrations
+heroku run python manage.py migrate
+
