@@ -17,7 +17,7 @@ from shopping_lists.forms import ShoppingItemForm
 class DetailsView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = ShoppingItemForm
     template_name = "shopping_lists/shoppinglist_detail.html"
-    success_message = "Shopping Item has been created."
+    success_message = "La Lista Fue Creada."
 
     def get_success_url(self):
         return reverse('shopping_lists:details', kwargs={'pk': self.kwargs.get("pk")})
@@ -41,7 +41,7 @@ class ShoppingItemUpdate(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = ShoppingItem
     form_class = ShoppingItemForm
     template_name = "shopping_lists/edit_item_form.html"
-    success_message = "Update was successful."
+    success_message = "Actualizacion Exitosa."
 
     def get_success_url(self):
         list_id = ShoppingItem.objects.filter(id=self.kwargs.get('pk')).first().list.id
@@ -63,7 +63,7 @@ class ShoppingItemDelete(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     """Deletion of a shopping list."""
     model = ShoppingItem
     template_name = "shopping_lists/delete_item_form.html"
-    success_message = "Delete was successful."
+    success_message = "Eliminacion Exitosa."
 
     def get_success_url(self):
         list_id = ShoppingItem.objects.filter(id=self.kwargs.get('pk')).first().list.id
