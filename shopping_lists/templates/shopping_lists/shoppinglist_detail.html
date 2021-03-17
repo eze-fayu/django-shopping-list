@@ -1,6 +1,6 @@
 {% extends 'shopping_lists/base.html' %}
 {% block title %}
-    Details for {{ object.name }}
+    Detalles para {{ object.name }}
 {% endblock %}
 {% block content %}
     <div class="modal modal-dialog modal-login modal-clear" id="AddList" tabindex="-1"
@@ -9,7 +9,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add New Item</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo Item</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -39,13 +39,13 @@
                             </div>
                             <button type="submit"
                                     class="btn btn-primary btn-round btn-lg btn-block">
-                                ADD
+                                Agregar
                             </button>
                         </form>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
                     </button>
                 </div>
             </div>
@@ -61,7 +61,7 @@
     <div class="row" style="margin-top:-20px">
         <div class="col-md-8 ml-auto mr-auto">
             <a href="{% url 'shopping_lists:dashboard' %}"
-               class="btn btn-neutral pull-left">❮ Back to Dashboard</a>
+               class="btn btn-neutral pull-left">❮ Volver al Tablero Principal</a>
             <div class="card card-plain" style="color:black">
                 <div class="card-body bg-white" style="opacity: .85">
                     {% if form.errors %}
@@ -70,7 +70,7 @@
                                 <div class="alert-icon">
                                     <i class="now-ui-icons objects_support-17"></i>
                                 </div>
-                                <strong>Oh snap!</strong>
+                                <strong>Rayos!</strong>
                                 {% for error in form.errors %}
                                     {{ form.errors.as_text | escape }}
                                 {% endfor %}
@@ -89,7 +89,7 @@
                                 <div class="alert-icon">
                                     <i class="now-ui-icons ui-2_like"></i>
                                 </div>
-                                <strong>Well done!</strong>
+                                <strong>Bien Hecho!</strong>
                                 {% for message in messages %}
                                     {{ message }}
                                 {% endfor %}
@@ -106,17 +106,16 @@
                         <a href="" data-toggle="modal"
                            data-target="#AddList"
                            class="padding-five btn btn-primary btn-round float-right"><i
-                                class="padding-five material-icons">add</i>
+                                class="padding-five material-icons">agregar</i>
                         </a>
                     </div>
                     <div class="table-responsive ">
                         <table class="table">
                             <tr>
                                 <h6>
-                                    Items for <strong><em
+                                    Items para <strong><em
                                         style="color: orange">{{ object.name }}</em></strong>
-                                    shopping
-                                    list.
+                                    lista de compras.
                                 </h6>
                             </tr>
                             {% if shopping_items %}
@@ -126,22 +125,22 @@
                                         #
                                     </th>
                                     <th>
-                                        Name
+                                        Nombre
                                     </th>
                                     <th>
-                                        Price
+                                        Precio
                                     </th>
                                     <th>
-                                        Quantity
+                                        Cantidad
                                     </th>
                                     <th class="text-center">
-                                        Since
+                                        Desde
                                     </th>
                                     <th class="text-right">
-                                        Last Updated
+                                        Ultima Actualización
                                     </th>
                                     <th class="text-right">
-                                        Actions
+                                        Acciones
                                     </th>
                                 </tr>
                                 </thead>
@@ -195,7 +194,7 @@
                                 <br>
                                 <thead>
                                 <tr>
-                                    ********** NO ITEMS FOUND PLEASE CREATE ONE **********
+                                    ********** NO SE ENCONTRARON ITEMS, POR FAVOR CREE UNO **********
                                 </tr>
                                 </thead>
                             {% endif %}

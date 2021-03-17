@@ -1,6 +1,6 @@
 {% extends 'shopping_lists/base.html' %}
 {% block title %}
-    Dashboard
+    Tablero
 {% endblock %}
 {% block content %}
     <div class="modal modal-dialog modal-login modal-clear" id="AddList" tabindex="-1"
@@ -9,7 +9,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Shopping List</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar a la Lista</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
                     </button>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                                 <div class="alert-icon">
                                     <i class="now-ui-icons ui-2_like"></i>
                                 </div>
-                                <strong>Well done!</strong>
+                                <strong>Bien Hecho!</strong>
                                 {% for message in messages %}
                                     {{ message }}
                                 {% endfor %}
@@ -89,7 +89,7 @@
                            data-toggle="modal"
                            data-target="#AddList"
                            class="padding-five btn btn-primary btn-round float-right">
-                            <i class="material-icons padding-five">add</i>
+                            <i class="material-icons padding-five">Agregar</i>
                         </a>
                     </div>
                     <div class="table-responsive ">
@@ -101,19 +101,19 @@
                                         #
                                     </th>
                                     <th>
-                                        Name
+                                        Nombre
                                     </th>
                                     <th>
 
                                     </th>
                                     <th class="text-center">
-                                        Since
+                                        Desde
                                     </th>
                                     <th class="text-right">
-                                        Last Updated
+                                        Ultima Actualizacion
                                     </th>
                                     <th class="text-right">
-                                        Actions
+                                        Acciones
                                     </th>
                                 </tr>
                                 </thead>
@@ -128,7 +128,7 @@
                                         </td>
                                         <td>
                                             <a style="color: blue"
-                                               href="{% url 'shopping_lists:details' list.id %}">Details
+                                               href="{% url 'shopping_lists:details' list.id %}">Detalles
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -167,7 +167,7 @@
                                 <br>
                                 <thead>
                                 <tr>
-                                    ********** NO SHOPPING LISTS FOUND PLEASE CREATE ONE **********
+                                    ********** NO HAY LISTAS. POR FAVOR CREE UNA **********
                                 </tr>
                                 </thead>
                             {% endif %}

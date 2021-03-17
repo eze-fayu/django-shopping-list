@@ -9,15 +9,15 @@
                 >
                     {% csrf_token %}
                     <div class="input-group form-group-no-border input-lg center">
-                        <p>Are Sure you want to delete "</p> {{ object.name }} <p>" shopping list? </p>
+                        <p>Seguro que quieres borrar "</p> {{ object.name }} <p>" lista de compras? </p>
                     </div>
                     <span>
                         <button type="submit"
                                 class="btn btn-primary btn-round">
-                            Yes, I'm sure
+                            Si, estoy seguro
                         </button>
                         <button type="button" class="btn btn-secondary btn-round"
-                                data-dismiss="modal">No, take me back
+                                data-dismiss="modal">No, llevame de regreso
                         </button>
                     </span>
                 </form>
