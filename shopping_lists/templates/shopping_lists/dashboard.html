@@ -9,7 +9,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar a la Lista</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -25,7 +25,7 @@
                         </div>
                             <button type="submit"
                                     class="btn btn-primary btn-round btn-lg btn-block">
-                                ADD
+                                Agregar
                             </button>
                     </span>
                         </form>
@@ -52,7 +52,7 @@
                                 <div class="alert-icon">
                                     <i class="now-ui-icons objects_support-17"></i>
                                 </div>
-                                <strong>Oh snap!</strong>
+                                <strong>Rayos!</strong>
                                 {% for error in form.errors %}
                                     {{ form.errors.as_text | escape }}
                                 {% endfor %}
@@ -89,7 +89,7 @@
                            data-toggle="modal"
                            data-target="#AddList"
                            class="padding-five btn btn-primary btn-round float-right">
-                            <i class="material-icons padding-five">Agregar</i>
+                            <i class="material-icons padding-five"> Agregar</i>
                         </a>
                     </div>
                     <div class="table-responsive ">
